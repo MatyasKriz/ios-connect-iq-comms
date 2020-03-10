@@ -7,6 +7,8 @@ This part of the communications system is arguably the harder one because of the
 ### Important Stuff
 For correct communication between the ConnectIQ app and iOS companion app, you need to make sure that your manifest settings contain valid app UUID as well as "Communications" and "BluetoothLowEnergy" permissions.
 
+**IMPORTANT**: I don't think this can work in the simulator, you'll need a real device to run this on.
+
 That's about it, check "ExampleCommsApp.mc" for Communications examples (both sending and receiving).
 
 If anything's not clear enough, consult [Official ConnectIQ iOS SDK Guide](https://developer.garmin.com/connect-iq/developer-tools/ios-sdk-guide/).
