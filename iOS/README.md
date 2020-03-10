@@ -7,7 +7,7 @@ In addition to all the steps described in the [Official ConnectIQ iOS SDK Guide]
 </array>
 ```
 
-Make sure to match `watchAppUuid` with the one from the ConnectIQ app [manifest.xml](manifest.xml).
+Make sure to match `watchAppUuid` with the one from the ConnectIQ app [manifest.xml](../ConnectIQ/manifest.xml).
 
 `urlScheme` must match the value specified in [Info.plist](Info.plist).
 
