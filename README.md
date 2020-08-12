@@ -14,4 +14,7 @@ Visit [ConnectIQ subfolder](ConnectIQ) for the readme specific to the ConnectIQ 
 #### iOS Companion App
 Visit [iOS subfolder](iOS) for the readme specific to the iOS companion app.
 
+### IMPORTANT
+For some unknown reason, ConnectIQ iOS SDK **REQUIRES** your app to set "Bundle display name" (key `CFBundleDisplayName` in **Info.plist**) or the device selection just up and fails.
+
 If anything's not clear enough, consult [Official ConnectIQ iOS SDK Guide](https://developer.garmin.com/connect-iq/developer-tools/ios-sdk-guide/).
