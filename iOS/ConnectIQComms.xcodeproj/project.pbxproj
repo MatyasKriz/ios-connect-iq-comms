@@ -3,14 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4859C82A2D6A5A610024807F /* MessageDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4859C8292D6A5A610024807F /* MessageDTO.swift */; };
+		485AB9E72D60BAD6004ED501 /* GarminService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485AB9E62D60BAD6004ED501 /* GarminService.swift */; };
+		48F4CC5D2D60A80E00514F9C /* ConnectIQ in Frameworks */ = {isa = PBXBuildFile; productRef = 48F4CC5C2D60A80E00514F9C /* ConnectIQ */; };
 		68D53DF7240C249B005F6FA1 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D53DF6240C249B005F6FA1 /* MessageView.swift */; };
-		68EE07A2240BCE6000D88CCD /* ConnectIQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68EE07A1240BCE6000D88CCD /* ConnectIQ.framework */; };
-		68EE07A3240BCE6000D88CCD /* ConnectIQ.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 68EE07A1240BCE6000D88CCD /* ConnectIQ.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		83AD7428358C43A90F58479D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93E3A1C2783F6D678E8319 /* AppDelegate.swift */; };
+		83AD7428358C43A90F58479D /* CommsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93E3A1C2783F6D678E8319 /* CommsApp.swift */; };
 		CB4B835497409449787189BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5C31DEAD5A946A21501D8C /* Assets.xcassets */; };
 		DCB7C50958ABF96500513DBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E039B71160D66153797458AD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -22,7 +23,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				68EE07A3240BCE6000D88CCD /* ConnectIQ.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -30,13 +30,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4859C8292D6A5A610024807F /* MessageDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDTO.swift; sourceTree = "<group>"; };
+		485AB9E62D60BAD6004ED501 /* GarminService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarminService.swift; sourceTree = "<group>"; };
 		6891F060240BB9DC0047ABE1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68D53DF6240C249B005F6FA1 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
-		68EE07A1240BCE6000D88CCD /* ConnectIQ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ConnectIQ.framework; sourceTree = "<group>"; };
 		8202FACDE2557CACEF1E5D22 /* ConnectIQComms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectIQComms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C0AD90D8D164B94334DF1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA5C31DEAD5A946A21501D8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FA93E3A1C2783F6D678E8319 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA93E3A1C2783F6D678E8319 /* CommsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommsApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68EE07A2240BCE6000D88CCD /* ConnectIQ.framework in Frameworks */,
+				48F4CC5D2D60A80E00514F9C /* ConnectIQ in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,10 +55,12 @@
 		36DF7CCF6736508B7D5E47DF /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				FA93E3A1C2783F6D678E8319 /* AppDelegate.swift */,
+				FA93E3A1C2783F6D678E8319 /* CommsApp.swift */,
 				68D53DF6240C249B005F6FA1 /* MessageView.swift */,
+				485AB9E62D60BAD6004ED501 /* GarminService.swift */,
 				6891F060240BB9DC0047ABE1 /* Info.plist */,
 				9D18D5DB9A3068A9AF37F37C /* Resources */,
+				4859C8292D6A5A610024807F /* MessageDTO.swift */,
 			);
 			name = Project;
 			sourceTree = "<group>";
@@ -74,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				36DF7CCF6736508B7D5E47DF /* Project */,
-				B12B03DFCD58A26481F80A0A /* Frameworks */,
 				3A312272C4768AD7B1CDFBE1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,14 +88,6 @@
 				E039B71160D66153797458AD /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		B12B03DFCD58A26481F80A0A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				68EE07A1240BCE6000D88CCD /* ConnectIQ.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +117,8 @@
 		F926A2B930E59CD871101111 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					0BA4A88459C1848DCE9CF49A = {
 						LastSwiftMigration = 1120;
@@ -139,6 +135,9 @@
 				cs,
 			);
 			mainGroup = 6C700F6B4A10852CE93A36DB;
+			packageReferences = (
+				48F4CC5B2D60A80E00514F9C /* XCRemoteSwiftPackageReference "connectiq-companion-app-sdk-ios" */,
+			);
 			productRefGroup = 3A312272C4768AD7B1CDFBE1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -165,8 +164,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				485AB9E72D60BAD6004ED501 /* GarminService.swift in Sources */,
 				68D53DF7240C249B005F6FA1 /* MessageView.swift in Sources */,
-				83AD7428358C43A90F58479D /* AppDelegate.swift in Sources */,
+				83AD7428358C43A90F58479D /* CommsApp.swift in Sources */,
+				4859C82A2D6A5A610024807F /* MessageDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +189,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -210,6 +212,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -218,10 +221,12 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 11;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = Z4J75M6GAC;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -247,6 +252,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -269,6 +275,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -277,10 +284,12 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 11;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = Z4J75M6GAC;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -303,20 +312,15 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Application/Frameworks",
-					"$(PROJECT_DIR)",
-				);
+				DEVELOPMENT_TEAM = Y3NT3WUF44;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.brightify.ConnectIQComms;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.tyas.ConnectIQComms;
 				PRODUCT_NAME = ConnectIQComms;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
@@ -335,20 +339,15 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Application/Frameworks",
-					"$(PROJECT_DIR)",
-				);
+				DEVELOPMENT_TEAM = Y3NT3WUF44;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.brightify.ConnectIQComms;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.tyas.ConnectIQComms;
 				PRODUCT_NAME = ConnectIQComms;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
@@ -383,6 +382,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		48F4CC5B2D60A80E00514F9C /* XCRemoteSwiftPackageReference "connectiq-companion-app-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/garmin/connectiq-companion-app-sdk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		48F4CC5C2D60A80E00514F9C /* ConnectIQ */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48F4CC5B2D60A80E00514F9C /* XCRemoteSwiftPackageReference "connectiq-companion-app-sdk-ios" */;
+			productName = ConnectIQ;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F926A2B930E59CD871101111 /* Project object */;
 }

@@ -5,13 +5,7 @@ using Toybox.Communications as Comms;
 
 var log = new Log(LOG_LEVEL_VERBOSE);
 
-enum {
-    MESSAGE_KEY_LATITUDE = 0,
-    MESSAGE_KEY_LONGITUDE = 1,
-    MESSAGE_KEY_MESSAGE = 2
-}
-
-class ExampleCommsApp extends Application.AppBase {
+class CommsApp extends Application.AppBase {
     hidden var timer;
     hidden var message = new Comms.PhoneAppMessage();
     hidden var progressBar = new Ui.ProgressBar("Ready.", null);
@@ -28,7 +22,7 @@ class ExampleCommsApp extends Application.AppBase {
         Comms.registerForPhoneAppMessages(method(:phoneMessageCallback));
     }
 
-    function phoneMessageCallback(_message) {
+    function phoneMessageCallback(_message as $.Toybox.Communications.PhoneAppMessage) as Void {
         $.log.info("Message received. Contents:");
         message = _message.data;
         $.log.info(message);
@@ -43,34 +37,46 @@ class ExampleCommsApp extends Application.AppBase {
         return [progressBar];
     }
 
-    function updateMessage() {
+    function updateMessage() as Void {
         $.log.verbose("Updating message.");
 
         progressBar.setDisplayString("Sending..");
 
 		// basic string
-//		var message = "heya!"
+        // var message = "heya!";
 
-		// standard dictionary
-        var message = [
-            {
-                MESSAGE_KEY_LATITUDE => 49.233162,
-                MESSAGE_KEY_LONGITUDE => 16.572311,
-                MESSAGE_KEY_MESSAGE => "NAyayayaaa"
-            },
-            {
-                MESSAGE_KEY_LATITUDE => 49.216426,
-                MESSAGE_KEY_LONGITUDE => 16.587749,
-                MESSAGE_KEY_MESSAGE => "Ayayayaaa"
-            }
-        ];
+        // array of dictionaries
+        // var message = [
+        //     {
+        //         "latitude" => 49.233162,
+        //         "longitude" => 16.572311,
+        //         "message" => "NAyayayaaa"
+        //     },
+        //     {
+        //         "latitude" => 49.216426,
+        //         "longitude" => 16.587749,
+        //         "message" => "Ayayayaaa"
+        //     }
+        // ];
+
+		// dictionary
+        var message = {
+            "latitude" => 49.233162,
+            "longitude" => 16.572311,
+            "message" => "Nope.avi"
+        };
+
         $.log.verbose("Transmitting message.");
-        Comms.transmit(message, null, new CommsRelay(method(:onTransmitComplete)));
-        $.log.verbose("Message transmitted.");
+        try {
+            Comms.transmit(message, null, new CommsRelay(method(:onTransmitComplete)));
+            $.log.verbose("Message transmitted.");
+        } catch(exception) {
+            $.log.error("Message failed to transmit: " + exception.getErrorMessage());
+        }
     }
 
 	// If you're debugging a problem with connecting/transmitting message, consult `README.md`.
-    function onTransmitComplete(isSuccess) {
+    function onTransmitComplete(isSuccess) as Void {
         if (isSuccess) {
             $.log.info("Message sent successfully.");
             progressBar.setDisplayString("Success.");

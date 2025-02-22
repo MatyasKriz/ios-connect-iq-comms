@@ -9,6 +9,6 @@ For correct communication between the ConnectIQ app and iOS companion app, you n
 
 **IMPORTANT**: I don't think this can work in the simulator, you'll need a real device to run this on.
 
-That's about it, check "ExampleCommsApp.mc" for Communications examples (both sending and receiving).
+That's about it, check "CommsApp.mc" for Communications examples (both sending and receiving).
 
 If anything's not clear enough, consult [Official ConnectIQ iOS SDK Guide](https://developer.garmin.com/connect-iq/developer-tools/ios-sdk-guide/).

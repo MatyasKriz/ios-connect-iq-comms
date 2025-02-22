@@ -27,7 +27,7 @@
 			<string>ConnectIQ URL Scheme</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>org.brightify.ConnectIQComms-ciq</string>
+				<string>cz.tyas.ConnectIQComms-ciq</string>
 			</array>
 		</dict>
 	</array>
